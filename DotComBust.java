@@ -22,7 +22,7 @@ public class DotComBust {
 		System.out.println("Pets.com, eToys.com, Go2.com");
 		System.out.println("Try to sink them all in the fewest number of guesses");
 
-		for (dotCom : dotComsList) {
+		for (DotCom dotCom : dotComsList) {
 			ArrayList<String> newLocation = helper.placeDotCom(3);
 			dotCom.setLocationCells(newLocation);
 		}
@@ -40,7 +40,7 @@ public class DotComBust {
 		numOfGuesses++;
 		String result = "miss";
 
-		for (dotCom : dotComsList) {
+		for (DotCom dotCom : dotComsList) {
 			result = dotCom.checkYourself(userGuess);
 			if (result.equals("hit")) {
 				break;
@@ -54,13 +54,13 @@ public class DotComBust {
 	}
 
 	private void finishGame() {
-		System.out.println(“All Dot Coms are dead! Your stock is now worthless.”); 
+		System.out.println("All Dot Coms are dead! Your stock is now worthless."); 
 		if (numOfGuesses <= 18) {
-			System.out.println(“It only took you “ + numOfGuesses + “ guesses.”);
-			System.out.println(“You got out before your options sank.”);
+			System.out.println("It only took you “ + numOfGuesses + “ guesses.");
+			System.out.println("You got out before your options sank.");
 		} else {
-			System.out.println(“Took you long enough. “+ numOfGuesses + “ guesses.”); 
-			System.out.println(“Fish are dancing with your options.”);
+			System.out.println("Took you long enough. "+ numOfGuesses + " guesses."); 
+			System.out.println("Fish are dancing with your options.");
 		}
 	}
 
