@@ -49,8 +49,8 @@ public class DotComBust {
 				dotComsList.remove(dotCom);
 				break;
 			}
-			
 		}
+		System.out.println(result);
 	}
 
 	private void finishGame() {
